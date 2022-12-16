@@ -96,6 +96,8 @@ function AM_PM(time){
 
 function updateTime(){
 
+    console.log("upadate time function is running");
+
     let time = new Date();
     let hours = time.getHours();
     let minutes = time.getMinutes();
@@ -105,11 +107,7 @@ function updateTime(){
     minutes = addTenthPlace(minutes);
     seconds = addTenthPlace(seconds);
     
-
-    
-    
     timeText.innerHTML=hours+":"+minutes+":"+seconds+" "+" "+" "+AM_PM(hours);   
-
 
 
 }
@@ -117,6 +115,8 @@ function updateTime(){
 setInterval(() => {
     updateTime()
 }, 1000);
+
+
 
 
 
